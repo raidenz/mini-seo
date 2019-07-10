@@ -1,0 +1,15 @@
+[
+  '{{repeat(15, 20)}}',
+  {
+    id: '{{objectId()}}',
+    title: '{{lorem(5, "words")}}',
+    permalink: function () {
+      return this.title.replace(/[^a-z0-9]+/gi, '-').replace(/^-*|-*$/g, '').toLowerCase();
+    },
+    body: '{{lorem(2, "paragraphs")}}',
+    meta: {
+      description: '{{lorem(1, "paragraphs")}}'
+    }
+    
+  }
+]
